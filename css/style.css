@@ -1,0 +1,203 @@
+/* Global Styles */
+body {
+    font-family: "Noto Sans Devanagari", sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #8b0000;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Guru Message Section */
+.guru-message {
+    background: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.guru-message h2 {
+    color: #8b0000;
+    font-size: 28px;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 10px;
+}
+
+.guru-message p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+/* Guru Footer */
+.guru-footer {
+    font-weight: bold;
+    color: #444;
+    font-size: 20px;
+}
+
+.pranam {
+    font-size: 22px;
+    color: #8b0000;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ========== IMAGE SLIDER ========== */
+.slider {
+    position: relative;
+    width: 600px;  
+    height: 400px; 
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: black; /* Background for images with transparency */
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Show full image without cropping */
+    border-radius: 10px;
+    display: none;
+    transition: opacity 1s ease-in-out; /* Smooth Transition */
+}
+
+.slides img.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Slider Buttons */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Navigation Bar */
+/* Style for the Menu Button */
+.menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+/* Side Navigation */
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    background: #8b0000;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+#sideNav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sideNav ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+#sideNav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+#sideNav ul li a:hover {
+    background: #d32f2f;
+    border-radius: 5px;
+}
+
+/* When menu is open */
+#sideNav.open {
+    left: 0;
+}
+
+/* ========== RESPONSIVENESS ========== */
+
+/* Responsive Slider for Smaller Screens */
+@media (max-width: 768px) {
+    .slider {
+        width: 90%;
+        height: 300px; 
+    }
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Responsive Guru Message Section */
+@media (max-width: 600px) {
+    .guru-message {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .guru-message h2 {
+        font-size: 24px;
+    }
+
+    .guru-message p {
+        font-size: 16px;
+    }
+}
